@@ -5,8 +5,6 @@
 # Make sure the secret is at least 30 characters and all random,
 # no regular words or you'll be exposed to dictionary attacks.
 #
-# SampleApp::Application.config.secret_token =
-# 'eff4f09a20ff37ff896466dd1b5a9a71fd6634474aeeecc19ae868ff1a861d6f0ab90be3fdda6a625fd3979ebbdac485813396f799daaffd6cb2f4de99500be2'
 
 
 require 'securerandom'
@@ -24,4 +22,5 @@ def secure_token
   end
 end
 
-SampleApp::Application.config.secret_key_base = secure_token
+SampleApp::Application.config.secret_token =
+    'eff4f09a20ff37ff896466dd1b5a9a71fd6634474aeeecc19ae868ff1a861d6f0ab90be3fdda6a625fd3979ebbdac485813396f799daaffd6cb2f4de99500be2'
